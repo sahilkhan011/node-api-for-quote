@@ -64,6 +64,10 @@ npm start
   }
   ```
 
+  ```bash
+  curl http://localhost:8585/api/quotes
+  ```
+
   ### 2. Read All Quotes
 
 - **Endpoint:** `GET /quotes`
@@ -72,7 +76,7 @@ npm start
 - **Example:**
 
   ```bash
-  curl http://localhost:8585/quotes
+  curl http://localhost:8585/api/quotes
   ```
 
   ### 3. Read a Specific Quote
@@ -83,7 +87,7 @@ npm start
 - **Example:**
 
   ```bash
-  curl http://localhost:8585/quotes/1
+  curl http://localhost:8585/api/quotes/1
   ```
 
   ### 4. Update a Quote
@@ -106,5 +110,5 @@ npm start
 - **Response:** JSON object with a success message.
 - **Example:**
   ```bash
-  curl -X DELETE http://localhost:8585/quotes/1
+  curl -X DELETE http://localhost:8585/api/quotes/1
   ```
