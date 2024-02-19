@@ -91,6 +91,7 @@ npm start
 - **Endpoint:** `PUT /quotes/:id`
 - **Description:** Modify an existing quote by its `id`.
 - **Request Body:** JSON object with updated `quote` and/or `author` properties.
+
   ```json
   {
     "quote": "Updated quote text",
@@ -98,7 +99,7 @@ npm start
   }
   ```
 
-### 5. Delete a Quote
+  ### 5. Delete a Quote
 
 - **Endpoint:** `DELETE /quotes/:id`
 - **Description:** Remove a quote by its `id`.
