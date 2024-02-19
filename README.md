@@ -98,7 +98,6 @@ npm start
   }
   ```
 
-````
 ### 5. Delete a Quote
 
 - **Endpoint:** `DELETE /quotes/:id`
@@ -107,4 +106,4 @@ npm start
 - **Example:**
   ```bash
   curl -X DELETE http://localhost:8585/quotes/1
-````
+  ```
