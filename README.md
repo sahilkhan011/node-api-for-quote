@@ -14,7 +14,7 @@ This is a simple Node.js API project that implements CRUD (Create, Read, Update,
 - **Node.js:** JavaScript runtime.
 - **Express:** Web application framework for Node.js.
 - **Nodemon:** Utility that monitors for changes and automatically restarts the server.
-- **File Storage:** Quotes are stored in a JSON file (`dummy.json`).
+- **File Storage:** Quotes are stored in a JSON file (`JSON/quote.json`).
 - **npm:** Node Package Manager for managing project dependencies.
 
 ## Getting Started
