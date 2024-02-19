@@ -27,9 +27,9 @@ This is a simple Node.js API project that implements CRUD (Create, Read, Update,
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/node-api-for-quote.git
-   ```
+```bash
+git clone https://github.com/your-username/node-api-for-quote.git
+```
 
 2. Navigate to the project directory:
 
@@ -39,9 +39,9 @@ cd node-api-for-quote
 
 3. Install Dependencies:
 
-   ```bash
-   npm install
-   ```
+```bash
+ npm install
+```
 
 4. Start Server:
 
@@ -57,58 +57,59 @@ npm start
 - **Description:** Add a new quote to the collection.
 - **Request Body:** JSON object with `quote` and `author` properties.
 
-  ```json
-  {
-    "quote": "Your quote text here",
-    "author": "Author name"
-  }
-  ```
+```json
+{
+  "quote": "Your quote text here",
+  "author": "Author name"
+}
+```
 
-  ```bash
-  curl http://localhost:8585/api/quotes
-  ```
+```bash
+curl http://localhost:8585/api/quotes
+```
 
-  ### 2. Read All Quotes
+### 2. Read All Quotes
 
 - **Endpoint:** `GET /quotes`
 - **Description:** Retrieve the list of all quotes.
 - **Response:** JSON array containing all quotes.
 - **Example:**
 
-  ```bash
-  curl http://localhost:8585/api/quotes
-  ```
+```bash
+curl http://localhost:8585/api/quotes
+```
 
-  ### 3. Read a Specific Quote
+### 3. Read a Specific Quote
 
 - **Endpoint:** `GET /quotes/:id`
 - **Description:** Retrieve a specific quote by its `id`.
 - **Response:** JSON object representing the quote with the specified `id`.
 - **Example:**
 
-  ```bash
-  curl http://localhost:8585/api/quotes/1
-  ```
+```bash
+curl http://localhost:8585/api/quotes/1
+```
 
-  ### 4. Update a Quote
+### 4. Update a Quote
 
 - **Endpoint:** `PUT /quotes/:id`
 - **Description:** Modify an existing quote by its `id`.
 - **Request Body:** JSON object with updated `quote` and/or `author` properties.
 
-  ```json
-  {
-    "quote": "Updated quote text",
-    "author": "Updated author name"
-  }
-  ```
+```json
+{
+  "quote": "Updated quote text",
+  "author": "Updated author name"
+}
+```
 
-  ### 5. Delete a Quote
+### 5. Delete a Quote
 
 - **Endpoint:** `DELETE /quotes/:id`
 - **Description:** Remove a quote by its `id`.
 - **Response:** JSON object with a success message.
 - **Example:**
-  ```bash
-  curl -X DELETE http://localhost:8585/api/quotes/1
-  ```
+
+```bash
+curl -X DELETE http://localhost:8585/api/quotes/1
+```
