@@ -48,3 +48,63 @@ cd node-api-for-quote
 ```bash
 npm start
 ```
+
+## Route Instructions
+
+### 1. Create a New Quote
+
+- **Endpoint:** `POST /quotes`
+- **Description:** Add a new quote to the collection.
+- **Request Body:** JSON object with `quote` and `author` properties.
+
+  ```json
+  {
+    "quote": "Your quote text here",
+    "author": "Author name"
+  }
+  ```
+
+  ### 2. Read All Quotes
+
+- **Endpoint:** `GET /quotes`
+- **Description:** Retrieve the list of all quotes.
+- **Response:** JSON array containing all quotes.
+- **Example:**
+
+  ```bash
+  curl http://localhost:8585/quotes
+  ```
+
+  ### 3. Read a Specific Quote
+
+- **Endpoint:** `GET /quotes/:id`
+- **Description:** Retrieve a specific quote by its `id`.
+- **Response:** JSON object representing the quote with the specified `id`.
+- **Example:**
+
+  ```bash
+  curl http://localhost:8585/quotes/1
+  ```
+
+  ### 4. Update a Quote
+
+- **Endpoint:** `PUT /quotes/:id`
+- **Description:** Modify an existing quote by its `id`.
+- **Request Body:** JSON object with updated `quote` and/or `author` properties.
+  ```json
+  {
+    "quote": "Updated quote text",
+    "author": "Updated author name"
+  }
+  ```
+
+````
+### 5. Delete a Quote
+
+- **Endpoint:** `DELETE /quotes/:id`
+- **Description:** Remove a quote by its `id`.
+- **Response:** JSON object with a success message.
+- **Example:**
+  ```bash
+  curl -X DELETE http://localhost:8585/quotes/1
+````
