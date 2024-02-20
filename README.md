@@ -79,6 +79,8 @@ curl http://localhost:8585/api/quotes
 curl http://localhost:8585/api/quotes
 ```
 
+-
+
 ### 3. Read a Specific Quote
 
 - **Endpoint:** `GET /quotes/:id`

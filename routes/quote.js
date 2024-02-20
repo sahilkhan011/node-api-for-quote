@@ -1,12 +1,12 @@
-const express = require("express");
-const controller = require("../controller/quote");
-const router = express.Router();
+import { Router } from "express";
+import { create, getAll, get, update, remove } from "../controller/quote.js";
+const router = Router();
 
 router
-  .post("/", controller.create)
-  .get("/", controller.getAll)
-  .get("/:id", controller.get)
-  .put("/:id", controller.update)
-  .delete("/:id", controller.remove);
+  .post("/", create)
+  .get("/", getAll)
+  .get("/:id", get)
+  .put("/:id", update)
+  .delete("/:id", remove);
 
-exports.router = router;
+export default router;

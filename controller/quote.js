@@ -1,9 +1,9 @@
-const fs = require("fs");
+import { readFileSync, writeFileSync } from "fs";
 const filePath = "./JSON/quote.json";
 
 function readJsonFile() {
   try {
-    const content = fs.readFileSync(filePath, "utf-8");
+    const content = readFileSync(filePath, "utf-8");
     return JSON.parse(content);
   } catch (error) {
     console.error("Error reading JSON file:", error);
@@ -13,13 +13,13 @@ function readJsonFile() {
 
 function writeJsonFile(data) {
   try {
-    fs.writeFileSync(filePath, JSON.stringify(data));
+    writeFileSync(filePath, JSON.stringify(data));
   } catch (error) {
     console.error("Error writing to JSON file:", error);
   }
 }
 
-exports.create = (req, res) => {
+export function create(req, res) {
   const jsonOjb = readJsonFile();
   const maxId = jsonOjb.length > 0 ? jsonOjb[jsonOjb.length - 1].id + 1 : 1;
 
@@ -33,14 +33,14 @@ exports.create = (req, res) => {
   writeJsonFile(jsonOjb);
 
   res.status(201).json(newItem);
-};
+}
 
-exports.getAll = (req, res) => {
+export function getAll(req, res) {
   const jsonOjb = readJsonFile();
   res.json(jsonOjb);
-};
+}
 
-exports.get = (req, res) => {
+export function get(req, res) {
   const jsonOjb = readJsonFile();
   const id = +req.params.id;
   const quote = jsonOjb.find((item) => item.id === id);
@@ -53,9 +53,9 @@ exports.get = (req, res) => {
       message: "Quote not found",
     });
   }
-};
+}
 
-exports.update = (req, res) => {
+export function update(req, res) {
   const jsonOjb = readJsonFile();
   const id = +req.params.id;
 
@@ -81,9 +81,9 @@ exports.update = (req, res) => {
       message: "Quote not found",
     });
   }
-};
+}
 
-exports.remove = (req, res) => {
+export function remove(req, res) {
   const jsonOjb = readJsonFile();
   const id = +req.params.id;
 
@@ -103,4 +103,4 @@ exports.remove = (req, res) => {
       message: "Quote not found",
     });
   }
-};
+}
