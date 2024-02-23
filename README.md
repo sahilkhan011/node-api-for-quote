@@ -28,7 +28,7 @@ This is a simple Node.js API project that implements CRUD (Create, Read, Update,
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/node-api-for-quote.git
+git clone https://github.com/sahilkhan011/node-api-for-quote.git
 ```
 
 2. Navigate to the project directory:
